@@ -1,0 +1,526 @@
+{
+  "TermsConditions": {
+    "pageTitle": "Terms & Conditions",
+    "pageSubtitle": "Legal terms and conditions for using AL SALAM services",
+    "lastUpdated": "Last Updated",
+    "location": "Kingdom of Saudi Arabia",
+    "welcomeTitle": "Welcome to AL SALAM",
+    "byUsingServices": "By Using Our Services",
+    "acceptanceText": "You acknowledge that you have read, understood, and agree to be bound by these Terms & Conditions. Your continued use of AL SALAM services constitutes acceptance of these terms.",
+    "noTermsAvailable": "No terms and conditions available at the moment.",
+    "importantNote": "Important",
+    "warningText": "Warning: Violation of these terms may result in account suspension or legal action.",
+    "importantResponsibility": "Important: You are responsible for ensuring all information provided is accurate and current.",
+    "bookmarkNote": "Note: We recommend bookmarking this page and checking it regularly for updates."
+  },
+  "PrivacyPolicy": {
+    "lastUpdated": "Last Updated",
+    "introduction": "Introduction",
+    "whoWeAre": "Who We Are",
+    "yourRights": "Your Rights",
+    "yourRightsDescription": "As our customer, you have several important rights regarding your personal data",
+    "privacyIsYourRight": "Privacy is Your Right",
+    "dataProcessing": "Data Processing",
+    "whatDataDoWeProcess": "What Data Do We Process",
+    "informationSharing": "Information Sharing",
+    "transferringInformation": "Transferring Information",
+    "whoWeWorkWith": "Who We Work With",
+    "mergersAcquisitions": "Mergers & Acquisitions",
+    "securityLegalCompliance": "Security & Legal Compliance",
+    "fraudPrevention": "Fraud Prevention",
+    "legalAuthorities": "Legal Authorities",
+    "dataRetention": "Data Retention",
+    "cookiesPolicy": "Cookies Policy",
+    "rightToModify": "Right to Modify"
+  },
+  "BlogPage": {
+    "title": "Blog",
+    "backButton": "Back to Home",
+    "error": "Blog not found"
+  },
+  "RegisterPage": {
+    "title": "Create an Account",
+    "subtitle": "Fill in your details to register",
+    "usernameLabel": "Username",
+    "usernamePlaceholder": "Enter your username",
+    "usernameError": "Username must be at least 2 characters",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "passwordError": "Password must be at least 6 characters",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Enter your email",
+    "emailError": "Invalid email address",
+    "phoneNumberLabel": "Phone Number",
+    "phoneNumberPlaceholder": "+966123456789",
+    "phoneNumberError": "Phone number must start with +966 and be at least 10 digits",
+    "whatsappNumberLabel": "WhatsApp Number",
+    "whatsappNumberPlaceholder": "Enter your WhatsApp number",
+    "whatsappNumberError": "WhatsApp number must be at least 10 digits",
+    "cityLabel": "City",
+    "cityPlaceholder": "Enter your city",
+    "cityError": "City is required",
+    "postalCodeLabel": "Postal Code",
+    "postalCodePlaceholder": "Enter your postal code",
+    "postalCodeError": "Postal code must be at least 4 characters",
+    "addressLabel": "Address",
+    "addressPlaceholder": "Enter your address",
+    "addressError": "Address must be at least 5 characters",
+    "submitButton": "Register",
+    "submitting": "Submitting...",
+    "haveAccount": "Already have an account? ",
+    "signIn": "Sign in",
+    "alreadyLoggedIn": "You are already logged in!",
+    "registerSuccess": "Registration successful!",
+    "registrationError": "Registration failed. Please check the form for errors.",
+    "serverError": "An error occurred. Please try again later."
+  },
+  "SignInPage": {
+    "title": "Sign In to Al Salem",
+    "subtitle": "Welcome back! Sign in to continue",
+    "usernameLabel": "Username",
+    "usernamePlaceholder": "Enter your username",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "submitButton": "Continue",
+    "noAccount": "Don't have an account?",
+    "createAccount": "Create account",
+    "usernameError": "Username must be at least 2 characters",
+    "passwordError": "Password must be at least 6 characters",
+    "loginSuccess": "Login successful! Welcome back.",
+    "loginError": "Login failed. Please check your credentials and try again.",
+    "alreadyLoggedIn": "You are already logged in! Redirecting to your profile."
+  },
+  "navbar": {
+    "home": "Home",
+    "services": "Services",
+    "pricing": "Pricing",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login",
+    "signup": "Sign Up",
+    "language-switcher": {
+      "ar": "AR",
+      "ar-fullname": "Arabic",
+      "en": "EN",
+      "en-fullname": "English"
+    }
+  },
+  "bottombar": {
+    "profile": "Profile",
+    "cart": "Cart",
+    "about": "About",
+    "home": "Home"
+  },
+  "hero": {
+    "title": "Furniture Moving Services",
+    "subtitle": "Integrated services that start with moving furniture",
+    "description": "We provide professional furniture moving services",
+    "ctaText": "Get Started",
+    "contactText": "Contact Us",
+    "textBadge": "Professional Services"
+  },
+  "aboutUs": {
+    "title": "About Us"
+  },
+  "whyChooseUs": {
+    "title": "Why Choose AL SALAM",
+    "reasons": [
+      {
+        "title": "Trained Labor",
+        "description": "Professional trained workers"
+      },
+      {
+        "title": "Fast Delivery",
+        "description": "Quick and efficient delivery"
+      },
+      {
+        "title": "Secure Shipping",
+        "description": "Safe transportation of your items"
+      },
+      {
+        "title": "Furniture Packaging",
+        "description": "Professional packaging services"
+      },
+      {
+        "title": "Furniture Installation",
+        "description": "Expert furniture assembly"
+      }
+    ],
+    "benefits": [
+      "We contract with trained labor specialized in transporting various movables, whether suitable for breaking or public.",
+      "We provide you with peace of mind for your company or home furniture when you need a furniture transport company in Riyadh."
+    ]
+  },
+  "costCalculator": {
+    "title": "Calculate the Estimated Cost of Moving",
+    "selectPackage": "Select Package",
+    "economy": "Economy (500 Riyals / unit)",
+    "standard": "Standard",
+    "premium": "Premium",
+    "taxIncluded": "Tax Included",
+    "noObligationEstimate": "No Obligation Estimate",
+    "rooms": "Rooms",
+    "estimatedPrice": "Estimated Price",
+    "riyals": "Riyals",
+    "completeOrder": "Complete Order"
+  },
+  "testimonials": {
+    "title": "Our Customers' Experiences",
+    "noRatings": "No testimonials available",
+    "stars": "{count, plural, one {# star} other {# stars}}",
+    "leaveRating": "Leave a Rating",
+    "rateExperience": "Rate your experience",
+    "star": "Stars",
+    "comment": "Comment",
+    "submit": "Submit",
+    "submitting": "Submitting...",
+    "feedbackSuccess": "Thanks for your feedback!",
+    "feedbackFail": "Failed to submit rating.",
+    "loginRequired": "Opps! u must be login to add comments"
+  },
+  "pricingTable": {
+    "title": "Our Packages",
+    "ctaText": "Choose Package",
+    "features_plans": "Features & Plans",
+    "features": "Features"
+  },
+  "servicesShowcase": {
+    "title": "Discover More",
+    "services": [
+      {
+        "title": "Furniture Moving Company in North Dammam - Professional Services at Affordable Prices",
+        "description": "Professional services at affordable prices"
+      },
+      {
+        "title": "Furniture Moving Prices with AL SALAM Company - The Quality We Deserve",
+        "description": "Best prices with the quality you deserve"
+      },
+      {
+        "title": "Corporate Furniture Moving with Highest Efficiency with AL SALAM - Speed, Safety, and Appropriate Prices",
+        "description": "Speed, safety, and appropriate prices"
+      }
+    ],
+    "read-more": "Read More"
+  },
+  "contactForm": {
+    "title": "Contact Us",
+    "description": "Have questions or inquiries? Get in touch with our team",
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone",
+    "phoneNumber": "Phone Number",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "successMessage": "Thank you for your message. We will get back to you shortly.",
+    "errorMessage": "An error occurred. Please try again later.",
+    "enquiryType": "Enquiry Type",
+    "inquiry": "General Inquiry",
+    "feedback": "Feedback",
+    "support": "Support",
+    "other": "Other",
+    "namePlaceholder": "Your full name",
+    "phonePlaceholder": "+966501234567",
+    "emailPlaceholder": "your@email.com",
+    "messagePlaceholder": "Write your message here...",
+    "selectEnquiryType": "Select enquiry type",
+    "loginRequired": "Please log in to submit an order.\t"
+  },
+  "faq": {
+    "title": "Common Questions",
+    "questions": [
+      {
+        "question": "How can I determine the cost of moving furniture?",
+        "answer": "You can use our cost calculator to get an estimate based on your requirements."
+      },
+      {
+        "question": "What are the payment methods available?",
+        "answer": "We accept cash, credit cards, and bank transfers."
+      },
+      {
+        "question": "How long does the moving process take?",
+        "answer": "The duration depends on the volume and distance, but we strive to complete it efficiently."
+      },
+      {
+        "question": "Do you offer furniture assembly services?",
+        "answer": "Yes, we provide professional furniture assembly services."
+      }
+    ]
+  },
+  "footer": {
+    "companyName": "AL SALAM",
+    "copyright": "© 2025 AL SALAM. All rights reserved."
+  },
+  "locationPicker": {
+    "chooseLocation": "Choose your location from the map",
+    "changeLocation": "Change location",
+    "coordinates": "Coordinates",
+    "address": "Address",
+    "dialogTitle": "Choose your location from the map",
+    "selectedCoordinates": "Selected coordinates",
+    "currentLocation": "My current location",
+    "useLocation": "Use this location",
+    "selectLocationFirst": "Select a location first",
+    "cancel": "Cancel",
+    "locationSelected": "Location selected",
+    "loadingAddress": "Getting address...",
+    "confirmLocation": "Confirm this location",
+    "loadingMap": "Loading map...",
+    "noAddressFound": "No address found",
+    "mapInstructions": "Click on the map to select your location",
+    "locationError": "Error determining location"
+  },
+  "order": {
+    "pageTitle": "Order Information",
+    "pageDescription": "Enter your personal information and select your location to complete the order",
+    "personalInfoTab": "Personal Information",
+    "locationTab": "Location",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "Enter your full name",
+    "nameDescription": "Your name as you want it to appear in records",
+    "phoneLabel": "Phone Number",
+    "phonePlaceholder": "Enter your phone number",
+    "phoneDescription": "Phone number to contact you",
+    "addressLabel": "Address",
+    "addressPlaceholder": "Enter your detailed address",
+    "addressDescription": "Postal address or residence address",
+    "locationLabel": "Geographic Location",
+    "locationDescription": "Select your geographic location on the map for better service",
+    "locationSelected": "Location selected",
+    "locationNotSelected": "Location not selected yet",
+    "submitInfo": "By clicking the submit button, you agree to the terms of service and privacy policy",
+    "submitButton": "Submit Information",
+    "submitting": "Submitting..."
+  },
+  "movingForm": {
+    "title": "Moving Service Request",
+    "subtitle": "Fill out the form below to get your personalized moving quote",
+    "orderSuccess": "Order created successfully!",
+    "imagesSuccess": "Images uploaded successfully!",
+    "orderError": "Failed to create order. Please try again.",
+    "serverError": "Server error occurred. Please try again later.",
+    "invalidResponse": "Invalid server response. Please try again.",
+    "loginRequired": "Please log in to submit an order.",
+    "serviceType": {
+      "title": "Service Type",
+      "intracity": {
+        "title": "Within City",
+        "description": "Moving within the same city"
+      },
+      "cityToCity": {
+        "title": "City to City",
+        "description": "Moving between different cities"
+      }
+    },
+    "packages": {
+      "title": "Choose Your Package",
+      "basic": "Basic Package",
+      "standard": "Standard Package",
+      "premium": "Premium Package",
+      "mostPopular": "Most Popular",
+      "startingPrice": "Starting price per room"
+    },
+    "addresses": {
+      "fromAddress": "From Address",
+      "toAddress": "To Address",
+      "fromCity": "From City",
+      "toCity": "To City",
+      "fromCityPlaceholder": "Enter departure city",
+      "toCityPlaceholder": "Enter destination city"
+    },
+    "dateTime": {
+      "movingDate": "Moving Date",
+      "preferredTime": "Preferred Time",
+      "pickDate": "Pick a date",
+      "selectTime": "Select preferred time"
+    },
+    "rooms": {
+      "title": "Number of Rooms",
+      "rooms": "rooms"
+    },
+    "contact": {
+      "title": "Contact Information",
+      "countryCode": "Country Code",
+      "phoneNumber": "Phone Number",
+      "phoneNumberPlaceholder": "Enter your phone number",
+      "promoCode": "Promo Code (Optional)",
+      "promoCodePlaceholder": "Enter promo code if you have one"
+    },
+    "extraServices": {
+      "title": "Additional Services",
+      "description": "Select additional services to enhance your moving experience",
+      "packing": "Professional Packing",
+      "dismantling": "Furniture Dismantling",
+      "storage": "Temporary Storage",
+      "insurance": "Moving Insurance",
+      "cleaning": "Post-Move Cleaning"
+    },
+    "details": {
+      "movingDetails": "Moving Details",
+      "description": "Description",
+      "descriptionPlaceholder": "Describe your moving requirements...",
+      "descriptionHelper": "Please provide details about items to be moved",
+      "estimatedWeight": "Estimated Weight (kg) - Optional",
+      "estimatedWeightPlaceholder": "Enter estimated weight",
+      "specialInstructions": "Special Instructions",
+      "specialInstructionsPlaceholder": "Any special instructions or requirements...",
+      "specialInstructionsHelper": "Mention any fragile items, access restrictions, or special handling requirements"
+    },
+    "pricing": {
+      "title": "Estimated Price",
+      "sar": "SAR",
+      "disclaimer": "*Final price may vary based on actual requirements",
+      "breakdown": "Price Breakdown",
+      "basePackage": "Base package",
+      "packageBase": "Package base price",
+      "selectPackage": "Please select a package to see pricing",
+      "roomPrice": "Rooms",
+      "cityToCityMultiplier": "City-to-city (×1.5)",
+      "room": "room",
+      "rooms": "rooms",
+      "cityToCityService": "City-to-city service",
+      "extraServices": "Extra Services"
+    },
+    "submit": {
+      "button": "Submit Moving Request",
+      "agreement": "By submitting this form, you agree to our terms and conditions"
+    },
+    "timeSlots": {
+      "08:00": "8:00 AM",
+      "09:00": "9:00 AM",
+      "10:00": "10:00 AM",
+      "11:00": "11:00 AM",
+      "12:00": "12:00 PM",
+      "13:00": "1:00 PM",
+      "14:00": "2:00 PM",
+      "15:00": "3:00 PM",
+      "16:00": "4:00 PM",
+      "17:00": "5:00 PM"
+    },
+    "countries": {
+      "saudiArabia": "Saudi Arabia",
+      "uae": "UAE",
+      "qatar": "Qatar",
+      "kuwait": "Kuwait"
+    },
+    "imagesLabel": "Upload Images (Optional)",
+    "imagesHint": "Upload up to 15 images (JPEG, PNG).",
+    "imageLimitError": "You can upload a maximum of 15 images."
+  },
+  "profile": {
+    "pageTitle": "My Account",
+    "loading": "Loading profile...",
+    "error": {
+      "noData": "No data available.",
+      "failedToFetch": "Failed to load profile data.",
+      "notAuthenticated": "Not authenticated. Please log in again.",
+      "serverError": "Server error occurred.",
+      "networkError": "Network error. Please check your connection.",
+      "retryButton": "Retry"
+    },
+    "editUser": {
+      "pageTitle": "Update User Information",
+      "loading": "Loading user data...",
+      "error": "Failed to load user data",
+      "backToProfile": "Back to Profile",
+      "usernameLabel": "Username",
+      "usernamePlaceholder": "Enter your username",
+      "usernameError": "Username must be at least 2 characters",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Enter new password (leave empty to keep current)",
+      "passwordError": "Password must be at least 6 characters",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Enter your email",
+      "emailError": "Invalid email address",
+      "phoneNumberLabel": "Phone Number",
+      "phoneNumberPlaceholder": "Enter your phone number",
+      "phoneNumberError": "Phone number must be at least 10 digits",
+      "whatsappNumberLabel": "WhatsApp Number",
+      "whatsappNumberPlaceholder": "Enter your WhatsApp number",
+      "whatsappNumberError": "WhatsApp number must be at least 10 digits",
+      "cityLabel": "City",
+      "cityPlaceholder": "Enter your city",
+      "cityError": "City is required",
+      "postalCodeLabel": "Postal Code",
+      "postalCodePlaceholder": "Enter your postal code",
+      "postalCodeError": "Postal code must be at least 4 characters",
+      "addressLabel": "Address",
+      "addressPlaceholder": "Enter your address",
+      "addressError": "Address must be at least 5 characters",
+      "saveButton": "Update Information",
+      "saving": "Updating...",
+      "updateSuccess": "User information updated successfully",
+      "updateSuccessDescription": "Your account details have been updated",
+      "updateError": "Failed to update user information",
+      "updateErrorDescription": "There was an error updating your account. Please try again."
+    },
+    "edit": {
+      "pageTitle": "Edit Profile",
+      "loading": "Loading profile...",
+      "firstNameLabel": "First Name",
+      "firstNamePlaceholder": "Enter your first name",
+      "lastNameLabel": "Last Name",
+      "lastNamePlaceholder": "Enter your last name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Enter your email",
+      "uploadImage": "Upload Image",
+      "imageHelp": "Click the button to upload a profile picture (JPG, PNG).",
+      "cancelButton": "Cancel",
+      "saveButton": "Save Changes",
+      "saving": "Saving...",
+      "updateSuccess": "Profile updated successfully",
+      "updateError": "Failed to update profile"
+    },
+    "sections": {
+      "personalInfo": {
+        "title": "Personal Information",
+        "fields": {
+          "phoneNumber": "Phone Number",
+          "whatsappNumber": "WhatsApp Number",
+          "address": "Address",
+          "city": "City",
+          "postalCode": "Postal Code",
+          "firstName": "First Name",
+          "lastName": "Last Name",
+          "username": "Username",
+          "email": "Email"
+        }
+      }
+    },
+    "order": {
+      "title": "Last Order",
+      "loading": "Loading order...",
+      "error": {
+        "noData": "No order data available.",
+        "failedToLoad": "Failed to load order data."
+      },
+      "fields": {
+        "orderId": "Order ID",
+        "date": "Date",
+        "serviceType": "Service Type",
+        "status": "Status",
+        "statusComment": "Status Details",
+        "total": "Total",
+        "rooms": "Rooms",
+        "fromAddress": "From Address",
+        "toAddress": "To Address",
+        "description": "Items Description"
+      },
+      "serviceTypes": {
+        "intracity": "Within City",
+        "city-to-city": "City to City"
+      },
+      "rooms": "rooms",
+      "currency": "SAR"
+    },
+    "actions": {
+      "edit": "Edit Profile",
+      "save": "Save Changes",
+      "cancel": "Cancel"
+    },
+    "logout": {
+      "action": "Logout",
+      "loggingOut": "Logging out..."
+    }
+  }
+}
