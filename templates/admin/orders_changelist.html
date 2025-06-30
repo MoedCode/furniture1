@@ -1,0 +1,69 @@
+{# File: templates/admin/orders_changelist.html #}
+{% extends "admin/change_list.html" %}
+{% load i18n %}
+
+{% block search %}
+  <form id="custom-search-form" method="get"
+        style="display: flex; gap:4px; align-items:center; margin-bottom:1em;">
+    {{ search_form.field }}
+    {{ search_form.q }}
+    <button type="submit">{% trans "Go" %}</button>
+
+    {# Preserve any other filters #}
+    {% for key, value in request.GET.items %}
+      {% if key != 'field' and key != 'q' %}
+        <input type="hidden" name="{{ key }}" value="{{ value|escape }}">
+      {% endif %}
+    {% endfor %}
+  </form>
+
+  <div id="search-results" style="margin-top:1em;"></div>
+
+  <script>
+    (function() {
+      const form = document.getElementById('custom-search-form');
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const field = document.getElementById('id_field').value;
+        const q     = document.getElementById('id_q').value;
+        const params = new URLSearchParams({ field: field, q: q });
+
+        fetch(`/api/orders/search/?${params.toString()}`, {
+          credentials: 'same-origin'
+        })
+        .then(res => res.json())
+        .then(data => {
+          const container = document.getElementById('search-results');
+          if (data.error) {
+            container.innerHTML = `<div style="color:red;">Error: ${data.error}</div>`;
+            return;
+          }
+          if (!data.results || data.results.length === 0) {
+            container.innerHTML = `<div>No results found.</div>`;
+            return;
+          }
+          // Build results table
+          let html = '<table style="width:100%; border-collapse: collapse;">';
+          html += '<thead><tr>';
+          Object.keys(data.results[0]).forEach(key => {
+            html += `<th style="border:1px solid #ccc; padding:4px;">${key}</th>`;
+          });
+          html += '</tr></thead><tbody>';
+          data.results.forEach(item => {
+            html += '<tr>';
+            Object.values(item).forEach(val => {
+              html += `<td style="border:1px solid #ccc; padding:4px;">${val}</td>`;
+            });
+            html += '</tr>';
+          });
+          html += '</tbody></table>';
+          container.innerHTML = html;
+        })
+        .catch(err => {
+          document.getElementById('search-results').innerHTML =
+            `<div style="color:red;">Fetch error: ${err.message}</div>`;
+        });
+      });
+    })();
+  </script>
+{% endblock %}

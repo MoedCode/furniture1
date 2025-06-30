@@ -1,0 +1,115 @@
+{# templates/admin/index.html #}
+{% extends "admin/index.html" %}
+{% load i18n static %}
+
+{% block sidebar %}
+  {{ block.super }}
+  <div class="module">
+    <h2>{% trans "Maintenance" %}</h2>
+    <ul id="maintenance-list">
+      <li>
+        <li><hr></li>
+        <a id="cache" class="button" href="{% url 'cache-control' %}">
+          <span class="btn-text">{% trans "Cache Control" %}</span>
+          <img id="cache-icon" src="https://img.icons8.com/external-flat-design-circle/64/external-Cache-Memory-cloud-computing-flat-design-circle.png" alt="Cache Icon" />
+        </a>
+        <li><hr></li>
+        <li><hr></li>
+
+        <a id="clean" class="button" href="{% url 'admin:clean_media' %}">
+          <span class="btn-text">{% trans "Clean Media" %}</span>
+          <strong class="recycle-icon"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/delete-all.png" alt="delete-all"/></strong>
+        </a>
+      </li>
+        <li><hr></li>
+
+    </ul>
+  </div>
+{% endblock %}
+
+{% block extrahead %}
+  {{ block.super }}
+  <style>
+    #maintenance-list {
+      list-style: none !important;
+      padding: 0;
+      margin: 1em 0;
+    }
+
+    #clean {
+      margin-top: 2vh;
+      display: block;
+      position: relative;
+      overflow: visible;
+      background-color: rgb(48, 246, 246);
+      min-width: fit-content;
+      max-width: 7vw;
+      padding: 0.5em;
+      text-align: center;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+
+    #clean .recycle-icon {
+      display: none;
+      position: absolute;
+      top: -1.5em;
+      right: -1.5em;
+      width: 2em;
+      height: 2em;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    #clean:hover .recycle-icon {
+      display: block;
+      animation: pop-in 0.2s ease-out forwards;
+      padding: 1vw;
+    }
+
+    @keyframes pop-in {
+      from { transform: scale(0); }
+      to   { transform: scale(1); }
+    }
+   #cache{
+      color: black;
+
+      background-color: rgb(209, 239, 239);
+      min-width: fit-content;
+      max-width: 7vw;
+    }
+    #cache {
+      display: block; position: relative; overflow: visible;
+      background-color: rgb(209, 239, 239); min-width: fit-content; max-width: 7vw;
+      padding: 0.5em; text-align: center; border-radius: 4px; text-decoration: none;
+    }
+    #cache-icon {
+      display: none; position: absolute; top: -1.5em; right: -1.5em;
+      width: 2em; height: 2em; pointer-events: none; z-index: 10;
+      opacity: 0.5;
+    }
+    #cache:hover #cache-icon {
+      display: block; animation: pop-in 0.2s ease-out forwards; opacity: 1;
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const cleanButton = document.getElementById("clean");
+      cleanButton.addEventListener("click", function (event) {
+        const confirmed = confirm("Are you sure? This will permanently delete all media files not linked in the database.");
+        if (!confirmed) {
+          event.preventDefault();  // Cancel navigation if user clicks Cancel
+        }
+      });
+    });
+  </script>
+{% endblock %}
+
+{#
+  ⚙️ EXPLANATION:
+  - When the user clicks "Clean Media", a confirmation popup will appear.
+  - If the user clicks OK, the clean-media action proceeds.
+  - If the user clicks Cancel, the action is aborted.
+  - The process PERMANENTLY deletes unlinked media files. This action is irreversible.
+#}

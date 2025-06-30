@@ -1,0 +1,19 @@
+Django
+djangorestframework
+mysqlclient
+django-cors-headers
+Pillow
+drf-spectacular
+geopy
+phonenumbers
+django-localflavor
+django-modeltranslation
+googletrans
+djangorestframework-simplejwt
+requests
+Markdown
+django-admin-rangefilter
+django-anymail
+psycopg2-binary
+vonage
+# gunicorn

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Fetcher</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h1 { color: #333; }
+    p { margin: 10px 0; }
+    #error { color: red; }
+    img { max-width: 100%; height: auto; margin: 20px 0; }
+  </style>
+</head>
+<body>
+  <h1 id="main-paragraph">Loading...</h1>
+  <img id="blog-image" alt="Blog image" />
+  <div id="articles"></div>
+  <p id="error"></p>
+
+  <script>
+    const url = 'http://54.166.6.159/blog/data?blog_id=85632167-eebf-4925-b118-4e089fc89e7e';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch(url)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`Network response was not ok (${response.status})`);
+          }
+          return response.json();
+        })
+        .then(data => {
+          const blogData = data.data;
+
+          // Main paragraph
+          document.getElementById('main-paragraph').textContent = blogData.paragraph;
+
+          // Image
+          const imgEl = document.getElementById('blog-image');
+          imgEl.src = blogData.image_url;
+
+          // Articles list
+          const articlesDiv = document.getElementById('articles');
+          blogData.article.forEach(text => {
+            // ensure single trailing period
+            const cleanText = text.trim().replace(/\.+$/, '');
+            const p = document.createElement('p');
+            p.textContent = `. ${cleanText}-`;
+            articlesDiv.appendChild(p);
+          });
+        })
+        .catch(error => {
+          document.getElementById('error').textContent = 'Error: ' + error.message;
+          document.getElementById('main-paragraph').textContent = 'Failed to load blog data';
+        });
+    });
+  </script>
+</body>
+</html>

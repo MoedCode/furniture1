@@ -1,0 +1,133 @@
+{% extends "admin/base.html" %}
+{% load static i18n %}
+
+{% block title %}{{ site_title }} | {{ site_header }}{% endblock %}
+
+{% block branding %}
+  <div id="branding">
+    <a href="{% url 'admin:index' %}">
+      <!-- <img src="{% static 'imgs/alsalam-logo.png' %}"
+           alt="Alsalam Logo"
+           style="height:2.5em; vertical-align: middle; margin-right:0.5em;" /> -->
+      <span style="vertical-align: middle; font-size:1.5em; font-weight:600;">
+        Alsalam Administration
+      </span>
+    </a>
+  </div>
+{% endblock %}
+
+{% block userlinks %}
+<button id="mode-toggle" title="{% trans 'Toggle light / dark mode' %}"
+        style="background:none;border:none;cursor:pointer;font-size:1.1em; margin-left:1em;">
+  🌙
+</button>
+  <form method="post" action="{% url 'admin:logout' %}" style="display:inline;">
+    {% csrf_token %}
+    <button
+     id="submit"
+      type="submit"
+      class="button logout-button"
+
+    >
+      {% trans "Log out" %}
+    </button>
+  </form>
+  <style>
+    /* admin/custom.css */
+#header, #user-tools {
+  background-color: #268bd2;   /* Solarized blue */
+}
+#header {
+  position: relative;
+}
+
+#header a, #header .breadcrumbs, #user-tools button {
+  color: #fdf6e3;               /* Solarized light */
+}
+
+#content, #container {
+  background: #fff;             /* Keep main white */
+  color: #002b36;               /* Solarized base dark for text */
+}
+
+/* High-contrast focus outlines */
+:focus {
+  outline: 3px dashed #b58900;  /* Solarized yellow */
+  outline-offset: 2px;
+}
+
+/* Tables, forms */
+table, .module, .form-row {
+  border-color: #93a1a1;        /* Solarized gray */
+}
+
+/* Your logout button (if you want extra refine) */
+.logout-button:hover {
+  background-color: #dc322f;    /* Solarized red */
+}
+   /* DARK MODE */
+/* Activate when .dark-mode is on <html> */
+.dark-mode body {
+  background-color: #deebee !important;   /* overall page background */
+  color:            #fdf6e3 !important;
+}
+
+.dark-mode #container,
+.dark-mode #content,
+.dark-mode #content-inner,
+.dark-mode #sidebar {
+  background-color: #76c6da !important;   /* the panels/sidebar */
+  color:            #eee      !important;
+}
+
+.dark-mode #header,
+.dark-mode #user-tools {
+  background-color: #84d0e3 !important;   /* top nav bars */
+  color:            #fdf6e3 !important;
+}
+
+.dark-mode a,
+.dark-mode .module th,
+.dark-mode .module td,
+.dark-mode .form-row,
+.dark-mode .button {
+  background-color: #586e75 !important;   /* inputs, tables, buttons */
+  color:            #fdf6e3 !important;
+  border-color:     #657b83 !important;
+}
+
+/* Keep your toggle icon visible on its own */
+#mode-toggle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+ #submit{
+    background:#73b6e5; color:#fff; border:none; padding:0.4em 0.8em; border-radius:3px; cursor:pointer;
+    border-radius: 5vw;
+    font-size:large;
+ }
+ #submit:hover{
+    background-color: #fe3c39;
+ }
+  </style>
+
+  <script>
+  (function(){
+    const toggle = document.getElementById('mode-toggle');
+    const root   = document.documentElement;  // <html>
+
+    // Initialize from localStorage
+    const isDark = localStorage.getItem('adminDarkMode') === 'true';
+    if (isDark) root.classList.add('dark-mode'), toggle.textContent = '☀️';
+
+    toggle.addEventListener('click', () => {
+      const nowDark = root.classList.toggle('dark-mode');
+      localStorage.setItem('adminDarkMode', nowDark);
+      toggle.textContent = nowDark ? '☀️' : '🌙';
+    });
+  })();
+</script>
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block content %}
+<h1><img width="100" height="100" src="https://img.icons8.com/ios-filled/50/delete-all.png" alt="delete-all"/></h1>
+  <h1>{% trans "Clean up orphaned media files" %}</h1>
+
+  {# Top‑of‑page summary banner #}
+  {% if total_errors %}
+    <div class="messagelist">
+      <div class="error">
+        {{ total_errors }} error{{ total_errors|pluralize }} occurred while cleaning.
+      </div>
+    </div>
+  {% elif total_deleted_files or total_deleted_dirs %}
+    <div class="messagelist">
+      <div class="success">
+        Deleted {{ total_deleted_files }} file{{ total_deleted_files|pluralize }}
+        and {{ total_deleted_dirs }} director{{ total_deleted_dirs|pluralize:"y,ies" }}.
+      </div>
+    </div>
+  {% else %}
+    <div class="messagelist">
+      <div class="info">
+        No orphaned files or directories were found—everything is clean!
+      </div>
+    </div>
+  {% endif %}
+
+  {# Now your detailed per‑model reports #}
+  {% if reports %}
+    {% for r in reports %}
+      <fieldset class="module aligned">
+        <legend>{{ r.model }}</legend>
+        <ul>
+          {% if r.deleted_files %}
+            <li>{{ r.deleted_files|length }} file(s) deleted.</li>
+          {% endif %}
+          {% if r.deleted_dirs %}
+            <li>{{ r.deleted_dirs|length }} empty dir(s) removed.</li>
+          {% endif %}
+          {% for err in r.errors %}
+            <li class="error">{{ err }}</li>
+          {% endfor %}
+        </ul>
+      </fieldset>
+    {% endfor %}
+  {% else %}
+    <p>{% trans "Nothing to clean." %}</p>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+dgc4sk8c0skk4ow4c0sw4oc4.159.69.42.206.sslip.io	TRUE	/	FALSE	1999999999	NEXT_LOCALE	ar
+dgc4sk8c0skk4ow4c0sw4oc4.159.69.42.206.sslip.io	TRUE	/	FALSE	1999999999	SameSite	lax
+

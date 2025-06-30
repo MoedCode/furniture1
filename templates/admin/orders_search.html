@@ -1,0 +1,58 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block title %}{{ title }} | {{ site_title }}{% endblock %}
+{% block breadcrumbs %}
+  <div class="breadcrumbs">
+    <a href="/admin/">Home</a> &rsaquo; {{ title }}
+  </div>
+{% endblock %}
+{% block content %}
+<h1>{{ title }}</h1>
+<form method="get" style="display:flex;gap:1em;margin-bottom:2em;">
+  <select name="field" required>
+    <option value="">Select field…</option>
+    {% for key,label in fields %}
+      <option value="{{ key }}" {% if key == query_field %}selected{% endif %}>{{ label }}</option>
+    {% endfor %}
+  </select>
+
+  {% if query_field in ['transportation_date','created_at'] %}
+    <input type="date" name="q" value="{{ query_val }}" required />
+  {% else %}
+    <input type="text" name="q" placeholder="Enter search value" value="{{ query_val }}" required />
+  {% endif %}
+
+  <button type="submit" class="default">{% trans "Search" %}</button>
+</form>
+
+{% if error %}
+  <p style="color:red;">{{ error }}</p>
+{% endif %}
+
+{% if results %}
+  <table class="adminlist compact">
+    <thead>
+      <tr>
+        <th>ID</th><th>State</th><th>Service</th><th>User</th><th>Package</th><th>Promo</th><th>Trans Date</th><th>Created</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for o in results %}
+      <tr>
+        <td>{{ o.id }}</td>
+        <td>{{ o.order_state }}</td>
+        <td>{{ o.service_type }}</td>
+        <td>{{ o.user.username }}</td>
+        <td>{{ o.package.name }}</td>
+        <td>{{ o.promo_code.code }}</td>
+        <td>{{ o.transportation_date }}</td>
+        <td>{{ o.created_at }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% else %}
+  <p>{% trans "No results found." %}</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-18 12:00+0300\n"
+"PO-Revision-Date: 2025-05-18 12:00+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Arabic <LL@li.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: api_core/serializers.py:9
+msgid "No packages created yet."
+msgstr "لم يتم إنشاء أي باقات بعد."
+
+#: api_core/serializers.py:10
+msgid "Package deleted successfully."
+msgstr "تم حذف الباقة بنجاح."
+
+#: api_core/serializers.py:11
+msgid "A profile already exists for this user."
+msgstr "يوجد ملف شخصي بالفعل لهذا المستخدم."
+
+#: api_core/serializers.py:12
+msgid "Profile not found."
+msgstr "لم يتم العثور على الملف الشخصي."
+
+#: api_core/serializers.py:13
+msgid "Profile has no image"
+msgstr "الملف الشخصي لا يحتوي على صورة"
+
+#: api_core/serializers.py:14
+msgid "At least one paragraph is required."
+msgstr "مطلوب فقرة واحدة على الأقل."
+
+#: api_core/serializers.py:15
+msgid "paragraphs is required."
+msgstr "الفقرات مطلوبة."
+
+#: api_core/serializers.py:16
+msgid "Empty paragraphs are not allowed."
+msgstr "لا يُسمح بالفقرات الفارغة."
+
+#: api_core/serializers.py:17
+msgid "Enter a valid email address."
+msgstr "يرجى إدخال بريد إلكتروني صالح."
+
+#: api_core/views.py:31
+msgid "Al Salam furniture moving"
+msgstr "السلام لنقل الأثاث"
