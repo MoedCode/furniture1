@@ -3,7 +3,7 @@ import {
   MapPin,
   FileText,
   Calculator,
-  Facebook,
+  Facebook as FacebookIcon,
   Instagram,
   MessageCircle,
   Music2,
@@ -32,6 +32,7 @@ const siteInfoSchema = z.object({
       facebook: z.string().nullable(),
       instagram: z.string().nullable(),
       tiktok: z.string().nullable(),
+      horizons: z.string().nullable(),
     }),
   }),
 });
@@ -47,6 +48,7 @@ export async function Footer() {
 
   const info = data.detail.info;
 
+  // Existing contact items
   const contactInfo = [
     {
       icon: <Mail className="h-4 w-4" />,
@@ -81,6 +83,38 @@ export async function Footer() {
     },
   ];
 
+  // New items: Designed By and Facebook Page
+  const extraInfo = [
+    {
+      icon: <Music2 className="h-4 w-4" />,
+      label: isRtl ? "صمم بواسطة" : "Designed By",
+      value: (
+        <a
+          href="https://your-site-url.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline"
+        >
+          Your Site
+        </a>
+      ),
+    },
+    {
+      icon: <FacebookIcon className="h-4 w-4" />,
+      label: isRtl ? "صفحة فيس بوك" : "Facebook Page",
+      value: (
+        <a
+          href="https://www.facebook.com/your-page"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline"
+        >
+          Your Facebook
+        </a>
+      ),
+    },
+  ];
+
   const legalLinks = [
     {
       label: isRtl ? "من نحن" : "About Us",
@@ -109,7 +143,7 @@ export async function Footer() {
     {
       name: "Facebook",
       href: data.detail.specials.facebook,
-      icon: <Facebook className="h-4 w-4" />,
+      icon: <FacebookIcon className="h-4 w-4" />,
     },
     {
       name: "Instagram",
@@ -166,9 +200,9 @@ export async function Footer() {
           ))}
         </div>
 
-        {/* Right Column - Contact Info */}
+        {/* Right Column - Contact & Extra Info */}
         <div className="flex flex-col space-y-4">
-          {contactInfo.map((item, index) => (
+          {[...contactInfo, ...extraInfo].map((item, index) => (
             <div key={index} className="flex items-center gap-2">
               {item.icon}
               <span className="text-sm">
@@ -182,8 +216,7 @@ export async function Footer() {
       {/* Footer Bottom */}
       <div className="text-center w-full py-2">
         <p className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()} {info.name ?? "Lockers"}.{" "}
-          {t("copyright")}
+          © {new Date().getFullYear()} {info.name ?? "Lockers"}. {t("copyright")}
         </p>
       </div>
     </footer>
